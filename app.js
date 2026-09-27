@@ -1,4 +1,4 @@
-// Data extracted from PDF "_Игрова сша мебель  3 (1).pdf"
+// Data extracted from PDF "_Игрова сша мебель  3 (1).pdf" + BEGRIPA handles
 const products = [
   {
     id: 1,
@@ -54,6 +54,23 @@ const products = [
   {
     id: 4,
     num: 4,
+    category: "Меблі",
+    categoryKey: "furniture",
+    categoryIcon: "🪑",
+    title: "BEGRIPA Handle Yellow Half-Round (5 1/8″ / 130 mm) — IKEA",
+    store: "IKEA",
+    domain: "ikea.com",
+    url: "https://www.ikea.com/us/en/p/begripa-handle-yellow-half-round-50572600/",
+    image: "images/begripa_handle.jpg",
+    qty: "4 шт.",
+    qtyNum: 4,
+    comment: "Дитячі напівкруглі ручки для тумб/шаф жовтого кольору (IKEA BEGRIPA, 130 мм)",
+    rawPdf: "Ручки BEGRIPA жовті 4 шт",
+    details: "Зручні ергономічні напівкруглі ручки сонячно-жовтого кольору із закругленими краями для дитячих меблів (тумб BESTÅ або шафи). Комплект 4 шт."
+  },
+  {
+    id: 5,
+    num: 5,
     category: "Стіни та оздоблення",
     categoryKey: "walls",
     categoryIcon: "🧱",
@@ -69,8 +86,8 @@ const products = [
     details: "Знімна настінна наклейка у формі елегантної арки з магнітною та грифельною поверхнею для малювання крейдою і кріплення магнітів."
   },
   {
-    id: 5,
-    num: 5,
+    id: 6,
+    num: 6,
     category: "Текстиль",
     categoryKey: "textiles",
     categoryIcon: "🌿",
@@ -86,8 +103,8 @@ const products = [
     details: "Преміальний гіпоалергенний килимок зі спіненого матеріалу EVA у скандинавському стилі. Водонепроникний, м'який та безпечний для дитини."
   },
   {
-    id: 6,
-    num: 6,
+    id: 7,
+    num: 7,
     category: "Освітлення",
     categoryKey: "lighting",
     categoryIcon: "💡",
@@ -103,8 +120,8 @@ const products = [
     details: "Дизайнерське поворотне бра з колекції Emerson Kids від West Elm. Золотисто-жовтий металевий корпус із плафоном з молочного матового скла."
   },
   {
-    id: 7,
-    num: 7,
+    id: 8,
+    num: 8,
     category: "Освітлення",
     categoryKey: "lighting",
     categoryIcon: "💡",
@@ -120,8 +137,8 @@ const products = [
     details: "Стельовий світильник діаметром 15 дюймів у тон настінним бра. Створює м'яке, розсіяне та затишне освітлення всієї ігрової кімнати."
   },
   {
-    id: 8,
-    num: 8,
+    id: 9,
+    num: 9,
     category: "Спорт та активність",
     categoryKey: "sports",
     categoryIcon: "🤸",
@@ -137,8 +154,8 @@ const products = [
     details: "Багатофункціональний домашній дерев'яний ігровий куточок: шведська стінка, драбинки, гірка та гойдалка з безпечними помаранчевими акцентами."
   },
   {
-    id: 9,
-    num: 9,
+    id: 10,
+    num: 10,
     category: "Стіни та оздоблення",
     categoryKey: "walls",
     categoryIcon: "🧱",
@@ -154,8 +171,8 @@ const products = [
     details: "Ексклюзивні акварельні шпалери «Whale Tale» з ілюстраціями китів, нарвалів та морських мешканців. Розмір замовлення: ширина 3900 мм, висота 2400 мм."
   },
   {
-    id: 10,
-    num: 10,
+    id: 11,
+    num: 11,
     category: "Меблі",
     categoryKey: "furniture",
     categoryIcon: "🪑",
@@ -171,8 +188,8 @@ const products = [
     details: "Ергономічний стіл з регулюванням по висоті на 3 рівні та двома стільцями. Ідеально підходить для малювання, ліплення, навчання та сенсорних ігор."
   },
   {
-    id: 11,
-    num: 11,
+    id: 12,
+    num: 12,
     category: "Текстиль",
     categoryKey: "textiles",
     categoryIcon: "🌿",
@@ -188,8 +205,8 @@ const products = [
     details: "Текстильні штори-балони кремового відтінку з витонченими стрічками для регулювання висоти підйому тканини. Комплект з 2 штук."
   },
   {
-    id: 12,
-    num: 12,
+    id: 13,
+    num: 13,
     category: "Спорт та активність",
     categoryKey: "sports",
     categoryIcon: "🤸",
@@ -205,8 +222,8 @@ const products = [
     details: "Підвісний терапевтичний гамак-гойдалка з натуральної щільної бавовни. Допомагає дитині розслабитися, розвиває баланс та вестибулярний апарат."
   },
   {
-    id: 13,
-    num: 13,
+    id: 14,
+    num: 14,
     category: "Спорт та активність",
     categoryKey: "sports",
     categoryIcon: "🤸",
@@ -222,8 +239,8 @@ const products = [
     details: "Складний трисекційний гімнастичний мат шириною 31 дюйм (80 см) та довжиною 71 дюйм (180 см) для занять спортом, розтяжки та безпечних ігор."
   },
   {
-    id: 14,
-    num: 14,
+    id: 15,
+    num: 15,
     category: "Спорт та активність",
     categoryKey: "sports",
     categoryIcon: "🤸",
