@@ -1,0 +1,437 @@
+// Data extracted from PDF "_Игрова сша мебель  3 (1).pdf"
+const products = [
+  {
+    id: 1,
+    num: 1,
+    category: "Меблі",
+    categoryKey: "furniture",
+    categoryIcon: "🪑",
+    title: "BILLY Bookcase White (31 1/2×11×79 1/2″) — IKEA",
+    store: "IKEA",
+    domain: "ikea.com",
+    url: "https://www.ikea.com/us/en/p/billy-bookcase-white-s89581509/",
+    image: "images/billy_bookcase.jpg",
+    qty: "2 шт.",
+    qtyNum: 2,
+    comment: "Шафа біла книжкова (IKEA BILLY) з регульованими полицями",
+    rawPdf: "Шафи 2 шт білі",
+    details: "Класична книжкова шафа IKEA BILLY у білому кольорі. Регульовані полиці дозволяють налаштувати простір під книги та іграшки різного розміру."
+  },
+  {
+    id: 2,
+    num: 2,
+    category: "Меблі",
+    categoryKey: "furniture",
+    categoryIcon: "🪑",
+    title: "BESTÅ Shelf Unit with Doors White / Selsviken High-Gloss — IKEA",
+    store: "IKEA",
+    domain: "ikea.com",
+    url: "https://www.ikea.com/us/en/p/besta-shelf-unit-with-doors-white-selsviken-high-gloss-white-s89047443/",
+    image: "images/besta_doors.jpg",
+    qty: "2 шт.",
+    qtyNum: 2,
+    comment: "Тумби з дверцятами, білий глянець (IKEA BESTÅ / Selsviken, 120×42×38 см)",
+    rawPdf: "Тумби 2-шт",
+    details: "Модульна тумба серії BESTÅ з глянцевими білими фасадами Selsviken та плавним закриванням дверцят. Зручне та стильне зберігання іграшок і речей."
+  },
+  {
+    id: 3,
+    num: 3,
+    category: "Меблі",
+    categoryKey: "furniture",
+    categoryIcon: "🪑",
+    title: "BESTÅ Frame White (Open Central Niche, 60×40×38 cm) — IKEA",
+    store: "IKEA",
+    domain: "ikea.com",
+    url: "https://www.ikea.com/us/en/p/besta-frame-white-70245848/",
+    image: "images/besta_frame.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Центральна відкрита ніша / каркас модульної системи (IKEA BESTÅ, білий)",
+    rawPdf: "Ниша центральная",
+    details: "Відкритий білий каркас BESTÅ для розташування по центру між тумбами. Ідеально підходить для книг, кошиків для зберігання або декору."
+  },
+  {
+    id: 4,
+    num: 4,
+    category: "Стіни та оздоблення",
+    categoryKey: "walls",
+    categoryIcon: "🧱",
+    title: "Removable Magnet Magic Arch with Chalkboard — Etsy",
+    store: "Etsy",
+    domain: "etsy.com",
+    url: "https://www.etsy.com/listing/4481861417/new-removable-magnet-magic-arch-with",
+    image: "images/magnet_magic_arch.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Магнітна дошка-арка з крейдяним покриттям на стіну",
+    rawPdf: "Магінтна доска",
+    details: "Знімна настінна наклейка у формі елегантної арки з магнітною та грифельною поверхнею для малювання крейдою і кріплення магнітів."
+  },
+  {
+    id: 5,
+    num: 5,
+    category: "Текстиль",
+    categoryKey: "textiles",
+    categoryIcon: "🌿",
+    title: "Baby Foam Interlocking Play Mat (Dusk Pink) — Lillefolk",
+    store: "Amazon",
+    domain: "amazon.com",
+    url: "https://www.amazon.com/Lillefolk-Baby-Foam-Play-Mat/dp/B0CRGQS4JT?ref_=ast_sto_dp&th=1",
+    image: "images/lillefolk_playmat.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "М'який килимок-пазл з піни EVA ніжно-рожевого кольору",
+    rawPdf: "Килим рожевий",
+    details: "Преміальний гіпоалергенний килимок зі спіненого матеріалу EVA у скандинавському стилі. Водонепроникний, м'який та безпечний для дитини."
+  },
+  {
+    id: 6,
+    num: 6,
+    category: "Освітлення",
+    categoryKey: "lighting",
+    categoryIcon: "💡",
+    title: "Kids Emerson Swivel Sconce (Gold / Yellow) — West Elm",
+    store: "West Elm",
+    domain: "westelm.com",
+    url: "https://www.westelm.com/products/emerson-sconce-d18567/",
+    image: "images/emerson_sconce.jpg",
+    qty: "2 шт.",
+    qtyNum: 2,
+    comment: "Настінне поворотне бра жовте / золотисте з матовим плафоном",
+    rawPdf: "Бра жовте 2 шт",
+    details: "Дизайнерське поворотне бра з колекції Emerson Kids від West Elm. Золотисто-жовтий металевий корпус із плафоном з молочного матового скла."
+  },
+  {
+    id: 7,
+    num: 7,
+    category: "Освітлення",
+    categoryKey: "lighting",
+    categoryIcon: "💡",
+    title: "Kids Emerson Flush Mount Light 15″ (Gold) — West Elm",
+    store: "West Elm",
+    domain: "westelm.com",
+    url: "https://www.westelm.com/products/emerson-flushmount-d18566/?pkey=ckids-decor&sb=WEK",
+    image: "images/emerson_flushmount.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Стельова люстра жовта / золотиста з молочним склом (15″)",
+    rawPdf: "Люстра жовта",
+    details: "Стельовий світильник діаметром 15 дюймів у тон настінним бра. Створює м'яке, розсіяне та затишне освітлення всієї ігрової кімнати."
+  },
+  {
+    id: 8,
+    num: 8,
+    category: "Спорт та активність",
+    categoryKey: "sports",
+    categoryIcon: "🤸",
+    title: "Toddler Indoor Climbing Gym & Swedish Ladder — HTWELL",
+    store: "Amazon",
+    domain: "amazon.com",
+    url: "https://www.amazon.com/dp/B0D2NN72TD/ref=twister_B0D2P1V499?_encoding=UTF8&th=1",
+    image: "images/climbing_gym.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Спортивна стінка / дитячий ігровий комплекс з гіркою (помаранчевий)",
+    rawPdf: "Спортивна стінка",
+    details: "Багатофункціональний домашній дерев'яний ігровий куточок: шведська стінка, драбинки, гірка та гойдалка з безпечними помаранчевими акцентами."
+  },
+  {
+    id: 9,
+    num: 9,
+    category: "Стіни та оздоблення",
+    categoryKey: "walls",
+    categoryIcon: "🧱",
+    title: "Whale Tale Ocean Scene Wallpaper Mural (3900×2400) — Hovia",
+    store: "Hovia",
+    domain: "hovia.com",
+    url: "https://hovia.com/products/kids-underwater-ocean-scene-watercolor-wallpaper-mural-m",
+    image: "images/hovia_wallpaper.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Фотошпалери акварельні «Морський світ з китами» (3900 × 2400 мм)",
+    rawPdf: "Шпалери 3900 на 2400",
+    details: "Ексклюзивні акварельні шпалери «Whale Tale» з ілюстраціями китів, нарвалів та морських мешканців. Розмір замовлення: ширина 3900 мм, висота 2400 мм."
+  },
+  {
+    id: 10,
+    num: 10,
+    category: "Меблі",
+    categoryKey: "furniture",
+    categoryIcon: "🪑",
+    title: "Adjustable Kids Activity Table with Chairs — FUNLIO",
+    store: "Amazon",
+    domain: "amazon.com",
+    url: "https://www.amazon.com/dp/B0BWJCZ89Y",
+    image: "images/kids_table.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Дитячий стіл з регулюванням висоти та стільцями для творчості",
+    rawPdf: "Стол",
+    details: "Ергономічний стіл з регулюванням по висоті на 3 рівні та двома стільцями. Ідеально підходить для малювання, ліплення, навчання та сенсорних ігор."
+  },
+  {
+    id: 11,
+    num: 11,
+    category: "Текстиль",
+    categoryKey: "textiles",
+    categoryIcon: "🌿",
+    title: "Farmhouse Balloon Tie-Up Window Curtains (2 Panels) — FHflyinghome",
+    store: "Amazon",
+    domain: "amazon.com",
+    url: "https://www.amazon.com/FHflyinghome-Curtains-Farmhouse-Balloon-Adjustable/dp/B0GCHKWJZ5",
+    image: "images/balloon_curtains.jpg",
+    qty: "2 шт.",
+    qtyNum: 2,
+    comment: "Штори регульовані з підв'язками у фермерському стилі (2 шт.)",
+    rawPdf: "Штори 2-штук",
+    details: "Текстильні штори-балони кремового відтінку з витонченими стрічками для регулювання висоти підйому тканини. Комплект з 2 штук."
+  },
+  {
+    id: 12,
+    num: 12,
+    category: "Спорт та активність",
+    categoryKey: "sports",
+    categoryIcon: "🤸",
+    title: "Cotton Sensory Therapy Hanging Hammock Swing — Amazon",
+    store: "Amazon",
+    domain: "amazon.com",
+    url: "https://www.amazon.com/Cotton-Sensory-Hammock-Indoor-Outdoor/dp/B0GS4SJ4DS",
+    image: "images/sensory_hammock.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Сенсорний підвісний гамак-кокон з бавовни для кімнати",
+    rawPdf: "Гаммак",
+    details: "Підвісний терапевтичний гамак-гойдалка з натуральної щільної бавовни. Допомагає дитині розслабитися, розвиває баланс та вестибулярний апарат."
+  },
+  {
+    id: 13,
+    num: 13,
+    category: "Спорт та активність",
+    categoryKey: "sports",
+    categoryIcon: "🤸",
+    title: "Folding Exercise Gymnastics Mat (71″×31″×2″) — Amazon",
+    store: "Amazon",
+    domain: "amazon.com",
+    url: "https://www.amazon.com/dp/B077T6HYCY/ref=sspa_dk_detail_2?pd_rd_i=B077T6HYCY",
+    image: "images/gymnastics_mat_31.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Спортивний гімнастичний килимок складний, розмір 71″×31″×2″ (~180×80×5 см)",
+    rawPdf: 'Спортивний килим - 71"x31"x2"',
+    details: "Складний трисекційний гімнастичний мат шириною 31 дюйм (80 см) та довжиною 71 дюйм (180 см) для занять спортом, розтяжки та безпечних ігор."
+  },
+  {
+    id: 14,
+    num: 14,
+    category: "Спорт та активність",
+    categoryKey: "sports",
+    categoryIcon: "🤸",
+    title: "Folding Soundproof Gymnastics Mat (71″×39″×2″) — KaRaDaStyle",
+    store: "Amazon",
+    domain: "amazon.com",
+    url: "https://www.amazon.com/KaRaDaStyle-Gymnastics-Exercise-Horizontal-Soundproof/dp/B07SQFRQKD",
+    image: "images/gymnastics_mat.jpg",
+    qty: "1 шт.",
+    qtyNum: 1,
+    comment: "Спортивний гімнастичний килимок складний шумоізоляційний (KaRaDaStyle, 71″×39″×2″, ~180×100×5 см)",
+    rawPdf: 'Спортивний килим - 71"x39"x2"',
+    details: "Повнорозмірний широкий гімнастичний мат шириною 39 дюймів (100 см) та довжиною 71 дюйм (180 см) з водовідштовхувальним помаранчевим покриттям і звукоізоляцією."
+  }
+];
+
+let activeCategory = "all";
+let searchQuery = "";
+
+// DOM Elements
+const searchInput = document.getElementById("searchInput");
+const searchClearBtn = document.getElementById("searchClearBtn");
+const countDisplay = document.getElementById("countDisplay");
+const filterChipsContainer = document.getElementById("filterChips");
+const tableBody = document.getElementById("tableBody");
+const emptyState = document.getElementById("emptyState");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxTitle = document.getElementById("lightboxTitle");
+const lightboxDesc = document.getElementById("lightboxDesc");
+const lightboxLink = document.getElementById("lightboxLink");
+const lightboxClose = document.getElementById("lightboxClose");
+const printBtn = document.getElementById("printBtn");
+
+// Category Definitions
+const categories = [
+  { key: "all", label: "Всі позиції", icon: "✦" },
+  { key: "Меблі", label: "Меблі", icon: "🪑" },
+  { key: "Освітлення", label: "Освітлення", icon: "💡" },
+  { key: "Текстиль", label: "Текстиль", icon: "🌿" },
+  { key: "Стіни та оздоблення", label: "Стіни та оздоблення", icon: "🧱" },
+  { key: "Спорт та активність", label: "Спорт та активність", icon: "🤸" }
+];
+
+function renderFilterChips() {
+  filterChipsContainer.innerHTML = "";
+  categories.forEach(cat => {
+    const count = cat.key === "all" 
+      ? products.length 
+      : products.filter(p => p.category === cat.key).length;
+
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = `filter-chip ${activeCategory === cat.key ? "active" : ""}`;
+    chip.innerHTML = `
+      <span class="chip-icon">${cat.icon}</span>
+      <span class="chip-label">${cat.label}</span>
+      <span class="chip-badge">${count}</span>
+    `;
+    chip.addEventListener("click", () => {
+      activeCategory = cat.key;
+      renderFilterChips();
+      renderTable();
+    });
+    filterChipsContainer.appendChild(chip);
+  });
+}
+
+function filterProducts() {
+  const query = searchQuery.trim().toLowerCase();
+  return products.filter(p => {
+    const matchesCategory = activeCategory === "all" || p.category === activeCategory;
+    const matchesSearch = !query || 
+      p.title.toLowerCase().includes(query) ||
+      p.comment.toLowerCase().includes(query) ||
+      p.category.toLowerCase().includes(query) ||
+      p.domain.toLowerCase().includes(query) ||
+      p.rawPdf.toLowerCase().includes(query);
+    return matchesCategory && matchesSearch;
+  });
+}
+
+function renderTable() {
+  const filtered = filterProducts();
+  tableBody.innerHTML = "";
+
+  // Update counter
+  countDisplay.innerHTML = `Показано позицій: <strong>${filtered.length}</strong> з <strong>${products.length}</strong>`;
+
+  if (filtered.length === 0) {
+    emptyState.style.display = "block";
+  } else {
+    emptyState.style.display = "none";
+  }
+
+  filtered.forEach((p, idx) => {
+    const row = document.createElement("tr");
+    row.className = "product-row";
+    row.innerHTML = `
+      <td class="col-num">
+        <div class="num-badge">${p.num}</div>
+      </td>
+      <td class="col-name">
+        <div class="category-tag">• ${p.category.toUpperCase()}</div>
+        <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="product-title" title="Відкрити сторінку товару на ${p.domain}">
+          <span>${p.title}</span>
+          <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+        <div class="product-domain">${p.domain}</div>
+      </td>
+      <td class="col-image">
+        <div class="image-wrapper" data-id="${p.id}" title="Натисніть для збільшення зображення">
+          <img src="${p.image}" alt="${p.title}" loading="lazy" />
+        </div>
+      </td>
+      <td class="col-qty">
+        <div class="qty-pill">${p.qty}</div>
+      </td>
+      <td class="col-comment">
+        <div class="comment-bubble">
+          <span class="pencil-icon">✏️</span>
+          <span class="comment-text">${p.comment}</span>
+        </div>
+      </td>
+    `;
+    tableBody.appendChild(row);
+  });
+
+  // Attach Lightbox triggers
+  document.querySelectorAll(".image-wrapper").forEach(wrapper => {
+    wrapper.addEventListener("click", () => {
+      const id = parseInt(wrapper.getAttribute("data-id"), 10);
+      const prod = products.find(item => item.id === id);
+      if (prod) {
+        openLightbox(prod);
+      }
+    });
+  });
+}
+
+function openLightbox(prod) {
+  lightboxImg.src = prod.image;
+  lightboxImg.alt = prod.title;
+  lightboxTitle.textContent = prod.title;
+  lightboxDesc.textContent = prod.details || prod.comment;
+  lightboxLink.href = prod.url;
+  lightboxLink.textContent = `Перейти в магазин (${prod.domain}) ↗`;
+  lightbox.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+// Event Listeners
+searchInput.addEventListener("input", (e) => {
+  searchQuery = e.target.value;
+  if (searchQuery.trim().length > 0) {
+    searchClearBtn.style.display = "block";
+  } else {
+    searchClearBtn.style.display = "none";
+  }
+  renderTable();
+});
+
+searchClearBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  searchQuery = "";
+  searchClearBtn.style.display = "none";
+  searchInput.focus();
+  renderTable();
+});
+
+// Keyboard shortcut '/' to focus search, and Esc to close
+document.addEventListener("keydown", (e) => {
+  if (e.key === "/" && document.activeElement !== searchInput) {
+    e.preventDefault();
+    searchInput.focus();
+    searchInput.select();
+  } else if (e.key === "Escape") {
+    if (lightbox.classList.contains("active")) {
+      closeLightbox();
+    } else if (searchInput.value) {
+      searchInput.value = "";
+      searchQuery = "";
+      searchClearBtn.style.display = "none";
+      renderTable();
+    }
+  }
+});
+
+lightboxClose.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+// Print / PDF Button
+printBtn.addEventListener("click", () => {
+  window.print();
+});
+
+// Initial Render
+renderFilterChips();
+renderTable();
